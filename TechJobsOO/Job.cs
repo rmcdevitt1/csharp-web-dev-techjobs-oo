@@ -24,7 +24,7 @@ namespace TechJobsOO
         // TODO2: Code a second constructor that takes 5 parameters & assigns values to
         //        name, employerName, employerLocation, jobType, and jobCoreCompetency.
         //        Also, this constructor should call the first in order to initialize the id field.
-        public Job(string name, Employer employerName, Location employerLocation, PositionType jobType, CoreCompetency jobCoreCompetency)
+        public Job(string name, Employer employerName, Location employerLocation, PositionType jobType, CoreCompetency jobCoreCompetency) : this()
         {
             Name = name;
             EmployerName = employerName;
@@ -35,6 +35,7 @@ namespace TechJobsOO
 
         //TODO: Generate Equals() and GetHashCode() methods.
         // TODO3: Generate the Equals() and GetHashCode() methods. Consider two Job objects equal when their id fields match.
+
         public override bool Equals(object obj)
         {
             return obj is Job job &&
