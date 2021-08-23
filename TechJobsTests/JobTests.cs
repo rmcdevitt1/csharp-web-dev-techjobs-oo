@@ -16,8 +16,6 @@ namespace TechJobsTests
         Job empty2;
         Job testJob;
 
-        //IDK IF THIS STUFF IS NEEDED//
-
         Employer acme;
         Location desert;
         PositionType qualityControl;
@@ -67,5 +65,32 @@ namespace TechJobsTests
             Job testEquality2 = new Job("Name", new Employer("test"), new Location("test"), new PositionType("test"), new CoreCompetency("test"));
             Assert.AreNotEqual(testEquality1, testEquality2);
         }
+
+
+        [TestMethod]
+        public void TestJobsToString()
+        {
+            //TODO: When passed a Job object, it should return a string that contains a blank line before and after the job information.
+            //Assert.IsTrue(testJob.ToString().Contains("________"));
+
+            //TODO: The string should contain a label for each field, followed by the data stored in that field. Each field should be on its own line.
+            Assert.IsTrue(testJob.ToString().Contains($"ID: " + testJob.Id));
+            Assert.IsTrue(testJob.ToString().Contains($"Name: " + testJob.Name));
+            Assert.IsTrue(testJob.ToString().Contains($"Employer: " + testJob.EmployerName.Value));
+            Assert.IsTrue(testJob.ToString().Contains($"Location: " + testJob.EmployerLocation.Value));
+            Assert.IsTrue(testJob.ToString().Contains($"Position Type: " + testJob.JobType.Value));
+            Assert.IsTrue(testJob.ToString().Contains($"Core Competency: " + testJob.JobCoreCompetency.Value));
+
+            //TODO: If a field is empty, the method should add, “Data not available” after the label.
+            Job jobToStringTest2 = new Job("", acme, desert, qualityControl, persistence);
+            Assert.IsTrue(jobToStringTest2.ToString().Contains($"Name: Data not avaliable"));
+
+
+            //TODO: (BONUS) If a Job object ONLY contains data for the id field, the method should return, “OOPS! This job does not seem to exist.”
+         
+        }
+
+
+
     }
 }

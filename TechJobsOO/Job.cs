@@ -47,5 +47,24 @@ namespace TechJobsOO
             return HashCode.Combine(Id);
         }
 
+
+        public override string ToString()
+        {
+            //return "________";
+
+            if (String.IsNullOrEmpty(Name))
+            {
+                Name = "Data not avaliable";
+            }
+
+            return $"\nID: {Id} \nName: {Name} \nEmployer: {EmployerName.ToString()} " +
+                    $"\nLocation: {EmployerLocation.ToString()} \nPosition Type: {JobType.ToString()} " +
+                    $"\nCore Competency: {JobCoreCompetency.ToString()} \n";
+        }
+
+
+
+
+
     }
 }
