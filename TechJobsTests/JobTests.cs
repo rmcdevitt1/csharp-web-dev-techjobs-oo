@@ -46,7 +46,7 @@ namespace TechJobsTests
         {
             //Use Assert statements to test that the ID values for the two objects are NOT the same and differ by 1.
             Assert.IsTrue(empty1.Id != empty2.Id);
-            Assert.IsTrue(empty1.Id - empty2.Id == 1);
+            Assert.IsTrue(empty2.Id - empty1.Id == 1);
         }
 
 
@@ -66,8 +66,6 @@ namespace TechJobsTests
             Job testEquality1 = new Job("Name", new Employer("test"), new Location("test"), new PositionType("test"), new CoreCompetency("test"));
             Job testEquality2 = new Job("Name", new Employer("test"), new Location("test"), new PositionType("test"), new CoreCompetency("test"));
             Assert.AreNotEqual(testEquality1, testEquality2);
-
-
         }
     }
 }
