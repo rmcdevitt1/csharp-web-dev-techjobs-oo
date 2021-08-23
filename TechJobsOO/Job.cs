@@ -52,10 +52,33 @@ namespace TechJobsOO
         {
             //return "________";
 
+
             if (String.IsNullOrEmpty(Name))
             {
                 Name = "Data not avaliable";
             }
+
+            //if (String.IsNullOrEmpty(EmployerName.Value))
+            //{
+            //    EmployerName.Value = "Data not avaliable";
+            //}
+
+            //if (String.IsNullOrEmpty(EmployerLocation.Value))
+            //{
+            //    EmployerLocation.Value = "Data not avaliable";
+            //}
+
+            //if (String.IsNullOrEmpty(JobType.Value))
+            //{
+            //    JobType.Value = "Data not avaliable";
+            //}
+
+            //if (String.IsNullOrEmpty(JobCoreCompetency.Value))
+            //{
+            //    JobCoreCompetency.Value = "Data not avaliable";
+            //}
+
+
 
             return $"\nID: {Id} \nName: {Name} \nEmployer: {EmployerName.ToString()} " +
                     $"\nLocation: {EmployerLocation.ToString()} \nPosition Type: {JobType.ToString()} " +
