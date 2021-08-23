@@ -18,18 +18,26 @@ namespace TechJobsTests
 
         //IDK IF THIS STUFF IS NEEDED//
 
-        //Employer acme;
-        //Location desert;
-        //PositionType qa;
-        //CoreCompetency persistence;
+        Employer acme;
+        Location desert;
+        PositionType qualityControl;
+        CoreCompetency persistence;
 
         [TestInitialize]
         public void InitializeJobObjects()
         {
+
+            acme = new Employer("ACME");
+            desert = new Location("Desert");
+            qualityControl = new PositionType("Quality Control");
+            persistence = new CoreCompetency("Persistence");
+
+            testJob = new Job("Product tester", acme, desert, qualityControl, persistence);
+
+
             empty1 = new Job();
             empty2 = new Job();
 
-            Job testJob = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
         }   
         
 
@@ -55,6 +63,10 @@ namespace TechJobsTests
 
         public void TestJobsForEquality()
         {
+            Job testEquality1 = new Job("Name", new Employer("test"), new Location("test"), new PositionType("test"), new CoreCompetency("test"));
+            Job testEquality2 = new Job("Name", new Employer("test"), new Location("test"), new PositionType("test"), new CoreCompetency("test"));
+            Assert.AreNotEqual(testEquality1, testEquality2);
+
 
         }
     }
