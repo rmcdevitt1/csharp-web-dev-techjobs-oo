@@ -34,6 +34,7 @@ namespace TechJobsOO
         //    return Value;
         //}
 
+        //we only need this b/c it needs its own specific value
         public Employer(string value) : base(value)
         {
             Value = value;
