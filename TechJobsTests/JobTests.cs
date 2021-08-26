@@ -90,14 +90,16 @@ namespace TechJobsTests
             //TODO: If a field is empty, the method should add, “Data not available” after the label.
             Job jobToStringTest2 = new Job("", new Employer(""), new Location(""), new PositionType(""), new CoreCompetency(""));
             Assert.IsTrue(jobToStringTest2.ToString().Contains($"Name: Data not avaliable"));
-            //Assert.IsTrue(jobToStringTest2.ToString().Contains($"Employer: Data not available"));
-            //Assert.IsTrue(jobToStringTest2.ToString().Contains($"Location: Data not available"));
-            //Assert.IsTrue(jobToStringTest2.ToString().Contains($"Position Type: Data not available"));
-            //Assert.IsTrue(jobToStringTest2.ToString().Contains($"Core Competency: Data not available"));
+            Assert.IsTrue(jobToStringTest2.ToString().Contains($"Employer: Data not available"));
+            Assert.IsTrue(jobToStringTest2.ToString().Contains($"Location: Data not available"));
+            Assert.IsTrue(jobToStringTest2.ToString().Contains($"Position Type: Data not available"));
+            Assert.IsTrue(jobToStringTest2.ToString().Contains($"Core Competency: Data not available"));
         }
 
         //TODO: (Bonus) If a Job object ONLY contains data for the id field, the method should return, “OOPS! This job does not seem to exist.”
+        [TestMethod]
+        public void TestJobsToStringBonus()
+        {
 
-
-    }
+        }
 }
