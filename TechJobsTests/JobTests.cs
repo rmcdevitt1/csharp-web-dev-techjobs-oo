@@ -36,8 +36,8 @@ namespace TechJobsTests
             empty1 = new Job();
             empty2 = new Job();
 
-        }   
-        
+        }
+
 
         [TestMethod]
         public void TestSettingJobId()
@@ -81,7 +81,7 @@ namespace TechJobsTests
             Assert.IsTrue(testJob.ToString().Contains($"Position Type: " + testJob.JobType.Value));
             Assert.IsTrue(testJob.ToString().Contains($"Core Competency: " + testJob.JobCoreCompetency.Value));
 
-        
+
         }
 
         [TestMethod]
@@ -100,6 +100,9 @@ namespace TechJobsTests
         [TestMethod]
         public void TestJobsToStringBonus()
         {
+            Job jobToStringTestBonus = new Job(); //instantiating a Job with no parameters means it only has an ID!
+            
 
         }
+    }
 }
