@@ -38,7 +38,7 @@ namespace TechJobsOO
 
         public CoreCompetency(string value) : base(value)
         {
-            Value = value;
+           
         }
     }
     

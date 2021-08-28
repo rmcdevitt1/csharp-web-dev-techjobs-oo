@@ -80,8 +80,6 @@ namespace TechJobsTests
             Assert.IsTrue(testJob.ToString().Contains($"Location: " + testJob.EmployerLocation.Value));
             Assert.IsTrue(testJob.ToString().Contains($"Position Type: " + testJob.JobType.Value));
             Assert.IsTrue(testJob.ToString().Contains($"Core Competency: " + testJob.JobCoreCompetency.Value));
-
-
         }
 
         [TestMethod]
@@ -98,11 +96,11 @@ namespace TechJobsTests
 
         //TODO: (Bonus) If a Job object ONLY contains data for the id field, the method should return, “OOPS! This job does not seem to exist.”
         [TestMethod]
-        public void TestJobsToStringBonus()
-        {
-            Job jobToStringTestBonus = new Job(); //instantiating a Job with no parameters means it only has an ID!
-            
+        //public void TestJobsToStringBonus()
+        //{
+        //    Job jobToStringTestBonus = new Job(); //instantiating a Job with no parameters means it only has an ID!
+        //    Assert.AreEqual(jobToStringTestBonus.ToString(), "OOPS! This job does not seem to exist.");
 
-        }
+        //}
     }
 }

@@ -52,6 +52,10 @@ namespace TechJobsOO
         {
             //return "________";
 
+            //if(String.IsNullOrEmpty(Name) && String.IsNullOrEmpty(EmployerName.Value) && String.IsNullOrEmpty(EmployerLocation.Value) && String.IsNullOrEmpty(JobType.Value) && String.IsNullOrEmpty(JobCoreCompetency.Value))
+            //{
+            //    return "OOPS! This job does not seem to exist.";
+            //}
 
             if (String.IsNullOrEmpty(Name))
             {
@@ -79,12 +83,11 @@ namespace TechJobsOO
             }
 
 
+            return $"\nID: {Id} \nName: {Name} \nEmployer: {EmployerName.Value} " +
+                    $"\nLocation: {EmployerLocation.Value} \nPosition Type: {JobType.Value} " +
+                    $"\nCore Competency: {JobCoreCompetency.Value} \n";
+            }
 
-            return $"\nID: {Id} \nName: {Name} \nEmployer: {EmployerName.ToString()} " +
-                    $"\nLocation: {EmployerLocation.ToString()} \nPosition Type: {JobType.ToString()} " +
-                    $"\nCore Competency: {JobCoreCompetency.ToString()} \n";
-        }
 
-
-    }
+         }
 }

@@ -39,7 +39,7 @@ namespace TechJobsOO
 
         public PositionType(string value) : base(value)
         {
-            Value = value;
+            
         }
     }
 }
